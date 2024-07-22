@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rel_sub_toolbar"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/bottom_sub_tool_bar_size"
+    android:gravity="center"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+
+    <ImageButton
+        android:id="@+id/imb_rotate_acw90"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:background="@android:color/transparent"
+        android:padding="10dip"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/rotate_acw_90" />
+
+    <ImageButton
+        android:id="@+id/imb_rotate_cw90"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_toRightOf="@+id/imb_rotate_acw90"
+        android:background="@android:color/transparent"
+        android:padding="10dip"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/rotate_cw_90" />
+
+    <ImageButton
+        android:id="@+id/imb_flip_h"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_toRightOf="@+id/imb_rotate_cw90"
+        android:background="@android:color/transparent"
+        android:padding="10dip"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/rotate_flip_h" />
+
+    <ImageButton
+        android:id="@+id/imb_flip_v"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_toRightOf="@+id/imb_flip_h"
+        android:background="@android:color/transparent"
+        android:padding="10dip"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/rotate_flip_v" />
+</RelativeLayout>

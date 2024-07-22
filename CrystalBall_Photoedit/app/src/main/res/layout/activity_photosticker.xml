@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Photosticker.PhotostickerActivity">
+
+    <com.samhung.crystalball.photoeditor.Photosticker.Views.SlidingUpPanelLayout
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        app:umanoDragView="@+id/dragView"
+        app:umanoOverlay="true"
+        app:umanoShadowHeight="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_main_back">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_workarea"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="50dip"
+                android:background="@color/main_back">
+
+                <RelativeLayout
+                    android:id="@+id/parent_image_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@color/color_main_back">
+
+                    <com.samhung.crystalball.photoeditor.Widget.SuperImageView
+                        android:id="@+id/iv_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/crystalball_mark_dark" />
+
+                    <com.math.photostickersdk.Slate
+                        android:id="@+id/drawing_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/iv_focus"
+                        android:layout_width="40dip"
+                        android:layout_height="40dip"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:onClick="onButtonClick"
+                        android:padding="10dip"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/face_focus" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_brushSlider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/drawing_view_picker_panel"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5dp"
+                    android:background="@android:drawable/editbox_dropdown_light_frame"
+                    android:padding="3dip"
+                    android:visibility="invisible">
+
+                    <com.samhung.crystalball.widgets.Slider
+                        android:id="@+id/slider_brushSize"
+                        android:layout_width="180dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:paddingEnd="10dip"
+                        android:paddingStart="10dip"
+                        app:slider_max="90"
+                        app:slider_progress="20" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/drawing_view_picker_panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/sky_blue_color_picker"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/drawing_view_brush_picker_recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="10dip"
+                            android:layout_weight="1"
+                            android:background="@color/sky_blue_color_picker">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                        <ImageView
+                            android:id="@+id/iv_brushSize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dip"
+                            android:layout_weight="1"
+                            android:background="@drawable/rect_brushsize_back"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/brush_size_line" />
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/drawing_view_color_picker_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/bottom_tool_bar_size"
+                        android:layout_alignParentBottom="true">
+
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/done_drawing_tv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_border_text_view"
+                    android:padding="8dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:textSize="20dip"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/accept_up" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/delete_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="50dip"
+                android:padding="20dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/delete_iv"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/rounded_border_text_view"
+                    android:padding="5dip"
+                    app:srcCompat="@drawable/delete_img" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dip"
+                android:layout_marginTop="15dip"
+                android:onClick="onButtonClick"
+                app:srcCompat="@drawable/round_btn_back" />
+
+            <ImageView
+                android:id="@+id/iv_save"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dip"
+                android:layout_marginTop="15dip"
+                android:onClick="onButtonClick"
+                app:srcCompat="@drawable/round_btn_save1" />
+
+            <ImageView
+                android:id="@+id/iv_undo"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="70dip"
+                android:layout_marginStart="20dip"
+                android:onClick="onButtonClick"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/btn_undo" />
+
+            <LinearLayout
+                android:id="@+id/ll_bottombar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_above="@id/ll_bottombar_empty"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bottom_tool_bar_size"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/btn_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_btn_back"
+                        android:onClick="onButtonClick"
+                        android:paddingBottom="10.0dip"
+                        android:paddingTop="10.0dip"
+                        app:srcCompat="@drawable/sticker_obj" />
+
+                    <ImageView
+                        android:id="@+id/btn_emoj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_btn_back"
+                        android:onClick="onButtonClick"
+                        android:paddingBottom="10.0dip"
+                        android:paddingTop="10.0dip"
+                        app:srcCompat="@drawable/sticker_emoj" />
+
+                    <ImageView
+                        android:id="@+id/btn_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_btn_back"
+                        android:onClick="onButtonClick"
+                        android:paddingBottom="10.0dip"
+                        android:paddingTop="10.0dip"
+                        app:srcCompat="@drawable/sticker_text" />
+
+                    <ImageView
+                        android:id="@+id/btn_draw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_btn_back"
+                        android:clickable="true"
+                        android:onClick="onButtonClick"
+                        android:paddingBottom="10.0dip"
+                        android:paddingTop="10.0dip"
+                        app:srcCompat="@drawable/sticker_drawing" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bottombar_empty"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color29"
+                android:orientation="vertical"
+                android:visibility="gone"></LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/image_emoji_bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.samhung.crystalball.photoeditor.Photosticker.Views.RealtimeBlurView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:realtimeBlurRadius="10dp"
+                app:realtimeOverlayColor="#33ffffff" />
+            <!--<com.viewpagerindicator.CirclePageIndicator-->
+            <!--android:id="@+id/image_emoji_indicator"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:padding="12dp"-->
+            <!--app:fillColor="#999999"-->
+            <!--app:pageColor="#e7e7e7" />-->
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/image_emoji_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+    </com.samhung.crystalball.photoeditor.Photosticker.Views.SlidingUpPanelLayout>
+
+    <FrameLayout
+        android:id="@+id/fr_pop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include layout="@layout/add_text_popup_window"></include>
+    </FrameLayout>
+</RelativeLayout>

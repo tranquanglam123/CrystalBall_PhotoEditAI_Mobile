@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/MainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="100"
+            android:background="@color/main_back">
+
+            <com.samhung.crystalball.photoeditor.Widget.SuperImageView
+                android:id="@+id/imageview_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="matrix" />
+
+            <com.samhung.crystalball.photoeditor.Photoshop.Dialogs.Views.BrushDrawingView
+                android:id="@+id/drawingView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:id="@+id/rl_naviview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dip"
+                android:layout_marginStart="20dip"
+                android:layout_marginTop="20dip"
+                android:background="@color/white"
+                android:padding="3dip">
+
+                <com.samhung.crystalball.photoeditor.Widget.NavigatorView
+                    android:id="@+id/naviView1"
+                    android:layout_width="120dip"
+                    android:layout_height="120dip"
+                    android:background="@color/main_back"
+                    android:padding="3dip" />
+            </RelativeLayout>
+
+            <com.samhung.crystalball.photoeditor.Widget.SuperImageView
+                android:id="@+id/imageview_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="matrix"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/button_undo"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="20dip"
+                android:layout_marginStart="20dip"
+                app:srcCompat="@drawable/btn_undo" />
+
+            <com.samhung.crystalball.widgets.PressableButton
+                android:id="@+id/imv_preview"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="20dip"
+                android:layout_marginEnd="20dip"
+                app:srcCompat="@drawable/btn_preview" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bottom_sub_tool_bar_size"
+                android:background="@android:color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bottom_sub_tool_bar_size"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="5dip"
+                    android:paddingStart="10dip">
+
+                    <RadioGroup
+                        android:id="@+id/rg_brush_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <RadioButton
+                            android:id="@+id/rd_drawer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10.0dip"
+                            android:layout_marginStart="10.0dip"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:button="@null"
+                            android:checked="true"
+                            android:drawableTop="@drawable/btn_drawer"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="그리기"
+                            android:textSize="11dip" />
+
+                        <RadioButton
+                            android:id="@+id/rd_eraser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10.0dip"
+                            android:layout_marginStart="10.0dip"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:button="@null"
+                            android:drawableTop="@drawable/btn_eraser"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="지우개"
+                            android:textSize="11dip" />
+
+                        <RadioButton
+                            android:id="@+id/rd_effect"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10.0dip"
+                            android:layout_marginStart="10.0dip"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:button="@null"
+                            android:drawableTop="@drawable/btn_effect"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="효과"
+                            android:textSize="11dip" />
+
+                        <RadioButton
+                            android:id="@+id/rd_preview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10.0dip"
+                            android:layout_marginStart="10.0dip"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:button="@null"
+                            android:drawableTop="@drawable/btn_softfocus_preview"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="미리보기"
+                            android:textSize="11dip" />
+                    </RadioGroup>
+                </RelativeLayout>
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bottom_tool_bar_size"
+                android:background="@color/color31"
+                android:gravity="center_vertical">
+
+                <SeekBar
+                    android:id="@+id/sb_stroke_width"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30.0dip"
+                    android:layout_marginEnd="40dip"
+                    android:layout_marginStart="40dip"
+                    android:layout_toLeftOf="@+id/button_accept"
+                    android:layout_toRightOf="@+id/button_close"
+                    android:background="@color/color2"
+                    android:max="100"
+                    android:progress="50"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/button_close"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_marginStart="10dip"
+                    app:srcCompat="@drawable/btn_cancel" />
+
+                <ImageView
+                    android:id="@+id/button_accept"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dip"
+                    app:srcCompat="@drawable/btn_accept" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_Effect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/background_light"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <com.samhung.crystalball.widgets.Slider
+            android:id="@+id/sb_stroke_effect"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            app:slider_middle_value="0"
+            app:slider_progress="50" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_sub_tool_bar_size"
+            android:background="@android:color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bottom_sub_tool_bar_size"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="5dip"
+                android:paddingStart="10dip">
+
+                <RadioGroup
+                    android:id="@+id/rg_effect_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/rd_effect1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dip"
+                        android:layout_marginStart="10dip"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableTop="@drawable/btn_softeffect1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="효과1"
+                        android:textSize="11dip" />
+
+                    <RadioButton
+                        android:id="@+id/rd_effect2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dip"
+                        android:layout_marginStart="10dip"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:button="@null"
+                        android:drawableTop="@drawable/btn_softeffect2"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="효과2"
+                        android:textSize="11dip" />
+
+                    <RadioButton
+                        android:id="@+id/rd_effect3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dip"
+                        android:layout_marginStart="10dip"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:button="@null"
+                        android:drawableTop="@drawable/btn_softeffect3"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="효과3"
+                        android:textSize="11dip" />
+
+                    <RadioButton
+                        android:id="@+id/rd_effect4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dip"
+                        android:layout_marginStart="10dip"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:button="@null"
+                        android:drawableTop="@drawable/btn_softeffect4"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="효과4"
+                        android:textSize="11dip" />
+                </RadioGroup>
+            </RelativeLayout>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout_HideEffect"
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:background="@color/color31"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:srcCompat="@android:drawable/arrow_down_float" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

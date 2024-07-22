@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/MainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="100"
+            android:background="@color/main_back">
+
+            <com.samhung.crystalball.photoeditor.Widget.SuperImageView
+                android:id="@+id/imageview_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="matrix" />
+
+            <com.samhung.crystalball.photoeditor.Widget.SuperImageView
+                android:id="@+id/imageview_photo2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="matrix" />
+
+            <TextView
+                android:id="@+id/textView_seekBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="80dip"
+                android:text="TextView"
+                android:textColor="@android:color/background_light"
+                android:textSize="28dip"
+                android:visibility="invisible" />
+
+            <com.samhung.crystalball.widgets.PressableButton
+                android:id="@+id/imv_preview"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="20dip"
+                android:layout_marginEnd="20dip"
+                app:srcCompat="@drawable/btn_preview" />
+
+            <RelativeLayout
+                android:id="@+id/rl_naviview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dip"
+                android:layout_marginStart="20dip"
+                android:layout_marginTop="20dip"
+                android:background="@android:color/background_light"
+                android:padding="3dip">
+
+                <com.samhung.crystalball.photoeditor.Widget.NavigatorView
+                    android:id="@+id/naviView"
+                    android:layout_width="120dip"
+                    android:layout_height="120dip"
+                    android:background="@color/color17" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bottom_sub_tool_bar_size"
+                    android:background="@android:color/background_light">
+
+                    <Button
+                        android:id="@+id/bt_manual"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dip"
+                        android:layout_marginStart="20dip"
+                        android:background="@drawable/oval_btn_back_3"
+                        android:text="수동"
+                        android:textColor="@android:color/background_light" />
+
+                    <com.samhung.crystalball.widgets.Slider
+                        android:id="@+id/seekBar_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dip"
+                        android:layout_marginStart="20dip"
+                        android:layout_toRightOf="@+id/bt_manual"
+                        android:background="@android:color/background_light"
+                        android:paddingLeft="16dip"
+                        android:paddingRight="16dip"
+                        app:slider_max="100" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bottom_tool_bar_size"
+                    android:background="@color/color31"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/button_close"
+                        android:layout_width="40dip"
+                        android:layout_height="40dip"
+                        android:layout_marginStart="10dip"
+                        app:srcCompat="@drawable/btn_cancel" />
+
+                    <ImageView
+                        android:id="@+id/button_accept"
+                        android:layout_width="40dip"
+                        android:layout_height="40dip"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dip"
+                        app:srcCompat="@drawable/btn_accept" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_ManualPad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bottom_sub_tool_bar_size"
+                    android:background="@android:color/background_light">
+
+                    <Button
+                        android:id="@+id/bt_auto"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dip"
+                        android:layout_marginStart="20dip"
+                        android:background="@drawable/oval_btn_back_3"
+                        android:text="자동"
+                        android:textColor="@android:color/background_light" />
+
+                    <com.samhung.crystalball.widgets.Slider
+                        android:id="@+id/seekBar_sub"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dip"
+                        android:layout_marginStart="20dip"
+                        android:layout_toRightOf="@+id/bt_auto"
+                        android:background="@android:color/background_light"
+                        android:paddingLeft="16dip"
+                        android:paddingRight="16dip"
+                        app:slider_max="6"
+                        app:slider_progress="3"
+                        app:slider_ripple_color="@color/color4" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bottom_tool_bar_size"
+                    android:background="@color/color31"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/button_sub_close"
+                        android:layout_width="40dip"
+                        android:layout_height="40dip"
+                        android:layout_marginStart="10dip"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/btn_cancel" />
+
+                    <ImageView
+                        android:id="@+id/button_sub_accept"
+                        android:layout_width="40dip"
+                        android:layout_height="40dip"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dip"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/btn_accept" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

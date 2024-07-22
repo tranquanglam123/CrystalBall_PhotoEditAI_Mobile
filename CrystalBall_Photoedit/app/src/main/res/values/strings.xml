@@ -1,0 +1,127 @@
+<resources>
+    <string name="app_name">수정구슬</string>
+    <string name="visionmix">사진합성</string>
+    <string name="photoshop">화상가공</string>
+    <string name="frameeffect">사진양상</string>
+    <string name="sticker">장식추가</string>
+    <string name="mygallery">나의 사진</string>
+    <string name="setting">설정</string>
+    <string name="help">도움말</string>
+    <string name="contents">차     례</string>
+    <string name="camera">사진기</string>
+    <string name="gallery">화상서고</string>
+    <string name="default_image">표준배경</string>
+    <string name="upload_picker_title">화상을 선택하십시오.</string>
+    <string name="directory_create_fail">등록부를 창조할수 없습니다.</string>
+    <string name="access_media_permissions_msg">기억기에 접근하려면 접근허가권한을 얻어야 합니다.</string>
+    <string name="continue_txt">계속</string>
+    <string name="not_now">취소</string>
+    <string name="media_access_denied_msg">기억기에 접근할수 없으므로 사진을 불러올수 없습니다.</string>
+    <string name="upload_dialog_title_fg">사진 선택</string>
+    <string name="processing">처리중</string>
+
+    <!-- Global Actions -->
+    <string name="action_confirm">확인</string>
+    <string name="action_cancel">취소</string>
+    <string name="action_charge">충진</string>
+    <string name="action_yes">예</string>
+    <string name="action_no">아니</string>
+    <string name="action_post">전송</string>
+    <string name="action_leaderboard_show">열람</string>
+
+    <!-- purchase & ranking -->
+    <string name="info_input_license">허가번호입력</string>
+    <string name="info_input_password">암호입력</string>
+    <string name="info_dev_code">장치코드 :</string>
+    <string name="info_ranking">등 </string>
+    <string name="title_input_name">이름입력</string>
+    <string name="title_name_error">이름입력오유</string>
+    <string name="title_ranking">등수</string>
+    <string name="title_error">오유</string>
+    <string name="title_success">성공</string>
+    <string name="title_mode_select">구입방식선택</string>
+    <string name="title_exit">끝내기</string>
+
+    <string name="title_post_highscore">최고점수전송</string>
+
+    <string name="title_leaderboard_show_error">오락순위</string>
+    <string name="title_price">점수(%s점)</string>
+    <string name="title_highscore">최고점수(%s)</string>
+    <string name="message_highscore">당신의 최고점수는\n%s입니다.</string>
+
+    <string name="message_post_highscore_success">봉사기에 성과적으로 전송되였습니다.</string>
+
+
+    <string name="message_incorrect_license">허가번호를 정확히 입력하십시오.</string>
+
+    <string name="message_exit">유희를 끝내겠습니까?</string>
+    <string name="message_connecting_server">봉사기접속중...</string>
+
+
+    <string name="message_input_score">점수를 올리십시오.</string>
+
+    <string name="title_gameitem">오락추가항목구입</string>
+
+    <string name="title_charge">역충진</string>
+
+
+    <string name="message_connection_error">봉사기접속이 실패하였습니다.</string>
+    <string name="message_forbidden">사용이 금지되였습니다.\n삼흥정보기술교류소에 문의하여 주십시오.</string>
+    <string name="message_no_free">무료점수로는 이 제품을 구입할수 없습니다.</string>
+
+    <string name="title_account_money">점수관련조작</string>
+
+
+    <string name="message_over">충진조작은 하루에 한번만 할수 있습니다.</string>
+    <string name="message_min">최소충진량보다 많아야 합니다.</string>
+    <string name="message_charge_success">성과적으로 충진되였습니다.</string>
+
+    <string name="message_charge1">무료점수 +</string>
+    <string name="message_charge2">충진가능\n비률 :</string>
+    <string name="message_charge3">%\n하루 최대충진량 :</string>
+    <string name="message_charge4">\n하루 최소충진량 :</string>
+    <string name="message_no_amount">충진하려는 점수가 없습니다.</string>
+
+    <string name="message_password">가입암호가 맞지 않습니다.</string>
+
+
+    <string name="message_purchase_price">구입점수 : </string>
+    <string name="message_origine_price">원래점수 : </string>
+
+    <string name="message_create_user">《나의 길동무 4》를 통하여 계정을 창조하십시오.</string>
+    <string name="message_no_saler">삼흥대리봉사원은 이 제품을 구입할수 없습니다.</string>
+    <string name="message_lack">점수가 부족합니다.\n《나의 길동무 4》를 통하여 점수를 충진하십시오.</string>
+    <string name="message_purchase_success">성과적으로 구입하였습니다.</string>
+
+    <string name="message_user_password">가입암호는 3글자이상이여야 합니다.</string>
+
+
+    <!-- pay -->
+    <string name="title_purchase">삼흥결제</string>
+    <string name="purchase_connection_error">결제가 실패하였습니다.</string>
+    <string name="no_app">《나의 길동무》4.3이후판본 프로그람을 설치하여 주십시오.</string>
+    <string name="title_login">삼흥계정가입</string>
+    <string name="login_connection_error">가입이 실패하였습니다.</string>
+
+
+    <!-- QrScan -->
+    <string name="alert_qrscan">해당한 인증화일을 찾을수 없습니다. 2차원부호코드를 통한 인증을 진행하겠습니까?</string>
+    <string name="qr_file_fail">2차원부호코드해석시 오유가 발생하였습니다.</string>
+    <string name="qr_file_success">인증화일을 성과적으로 생성하였습니다.</string>
+    <string name="device_code">기대번호 : </string>
+    <string name="placeHolder">placeHolder</string>
+    <string name="seekbar_add">+</string>
+    <string name="seekbar_minus">-</string>
+    <string name="create">생성</string>
+    <string name="scan_failed">인식실패</string>
+    <string name="bottom_hint">렌즈로부터 10cm거리를 보장하고 적당한 조명을 보장하십시오.</string>
+    <string name="top_hint">코드식별결과</string>
+    <string name="cancel">취소</string>
+    <string name="msg_camera_framework_bug">사진기상태를 검사하십시오.</string>
+    <string name="button_ok">확인</string>
+    <string name="scan_text">검출구역에서 2개의 부분이 검출되였으므로 자동검색중입니다.</string>
+    <string name="msg_suc">인식결과:</string>
+    <string name="msg_fail">인식실패</string>
+    <string name="analyzing">인식중...</string>
+    <string name="comment" />
+</resources>

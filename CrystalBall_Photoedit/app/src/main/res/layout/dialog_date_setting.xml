@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@android:drawable/dialog_holo_light_frame"
+    android:clickable="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView_TITLE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="110"
+        android:background="@color/color31"
+        android:gravity="center_horizontal"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:text="날 자 설 정"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dip"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="105">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="80"
+            android:gravity="bottom|center_horizontal">
+
+            <Button
+                android:id="@+id/btnUP_year"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:background="@drawable/btn_up_arrow"
+                android:foreground="@drawable/btn_up_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="102"
+            android:gravity="center_vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="98"
+            android:gravity="bottom|center_horizontal">
+
+            <Button
+                android:id="@+id/btnUP_month"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:alpha="100"
+                android:background="@drawable/btn_up_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="102"
+            android:gravity="center_vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="98"
+            android:gravity="bottom|center_horizontal">
+
+            <Button
+                android:id="@+id/btnUP_day"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:alpha="100"
+                android:background="@drawable/btn_up_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="105">
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="105">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="80">
+
+            <TextView
+                android:id="@+id/txtYY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="1990"
+                android:textColor="@color/color_menu_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="102"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txYY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="fill_vertical"
+                android:text="년"
+                android:textColor="@android:color/background_light"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="98">
+
+            <TextView
+                android:id="@+id/txtMM"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="12"
+                android:textColor="@color/color_menu_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="102"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txMM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="월"
+                android:textColor="@android:color/background_light"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="98">
+
+            <TextView
+                android:id="@+id/txtDD"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="28"
+                android:textColor="@color/color_menu_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="105">
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dip"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="105">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="80"
+            android:gravity="top|center_horizontal">
+
+            <Button
+                android:id="@+id/btnDWN_year"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:background="@drawable/btn_dwn_arrow"
+                android:foreground="@drawable/btn_dwn_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="102"
+            android:gravity="center_vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="98"
+            android:gravity="top|center_horizontal">
+
+            <Button
+                android:id="@+id/btnDWN_month"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:alpha="100"
+                android:background="@drawable/btn_dwn_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="102"
+            android:gravity="center_vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="98"
+            android:gravity="top|center_horizontal">
+
+            <Button
+                android:id="@+id/btnDWN_day"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:alpha="100"
+                android:background="@drawable/btn_dwn_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="105">
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="110"
+        android:background="@drawable/rect_btn_back_alert"
+        android:text="확인"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp" />
+
+</LinearLayout>

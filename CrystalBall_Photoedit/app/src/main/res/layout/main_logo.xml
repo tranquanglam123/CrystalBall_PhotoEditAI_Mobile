@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/logo_back">
+
+    <ImageView
+        android:id="@+id/imageView_logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/logo_top" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/logo_bottom" />
+
+    <ImageView
+        android:id="@+id/btn_drawer_open"
+        android:layout_width="25dip"
+        android:layout_height="25dip"
+        android:layout_marginStart="15dip"
+        android:layout_marginTop="25dip"
+        android:onClick="onButtonClick"
+        app:srcCompat="@drawable/drawer_open_btn" />
+
+    <ImageView
+        android:id="@+id/btn_top_help"
+        android:layout_width="25dip"
+        android:layout_height="25dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="25dip"
+        android:layout_marginTop="25dip"
+        android:onClick="onButtonClick"
+        android:visibility="gone"
+        app:srcCompat="@drawable/btn_open_top" />
+</RelativeLayout>

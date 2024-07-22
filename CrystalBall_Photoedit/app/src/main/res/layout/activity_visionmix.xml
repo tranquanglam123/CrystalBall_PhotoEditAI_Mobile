@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VisionMix.Activities.VisionmixActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="100">
+
+            <!--<ImageView-->
+            <!--android:id="@+id/iv_background"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@color/main_back"-->
+            <!--android:scaleType="matrix"-->
+            <!--android:visibility="visible" />-->
+            <com.samhung.crystalball.photoeditor.VisionMix.Views.BackgroundView
+                android:id="@+id/iv_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+
+            <com.samhung.crystalball.photoeditor.VisionMix.Views.ForegroundView
+                android:id="@+id/fv_foreground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawingCacheQuality="low"
+                android:layerType="hardware" />
+
+            <ImageView
+                android:id="@+id/iv_effect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true" />
+
+            <ImageView
+                android:id="@+id/button_undo"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="20dip"
+                android:layout_marginStart="20dip"
+                android:onClick="onButtonClick"
+                app:srcCompat="@drawable/btn_undo" />
+
+            <ImageView
+                android:id="@+id/button_reset"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="20dip"
+                android:layout_marginEnd="20dip"
+                android:onClick="onButtonClick"
+                app:srcCompat="@drawable/btn_reset_round" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bottom_sub_tool_bar_size"
+                android:background="@android:color/white"
+                android:gravity="center_vertical|center_horizontal">
+
+                <include layout="@layout/sub_menu_vision_mix" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="@color/color31"
+                android:gravity="center_vertical|clip_horizontal"
+                android:paddingEnd="10dip"
+                android:paddingStart="10dip">
+
+                <ImageView
+                    android:id="@+id/button_close"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:onClick="onButtonClick"
+                    app:srcCompat="@drawable/btn_cancel" />
+
+                <ImageView
+                    android:id="@+id/button_accept"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_alignParentEnd="true"
+                    android:onClick="onButtonClick"
+                    app:srcCompat="@drawable/btn_accept" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_naviview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="false"
+        android:layout_marginEnd="20dip"
+        android:layout_marginStart="20dip"
+        android:layout_marginTop="20dip"
+        android:background="@android:color/background_light"
+        android:padding="3dip">
+
+        <com.samhung.crystalball.photoeditor.Widget.NavigatorView
+            android:id="@+id/naviView"
+            android:layout_width="120dip"
+            android:layout_height="120dip"
+            android:background="@color/main_back" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_sub_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/layout_sub_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_sub_tool_bar_size"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:padding="5dip"
+            android:paddingStart="10dip">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_tool_bar_size"
+            android:background="@color/colorAccent"
+            android:gravity="center_vertical|clip_horizontal"
+            android:paddingEnd="10dip"
+            android:paddingStart="10dip">
+
+            <ImageView
+                android:id="@+id/button_sub_close"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:onClick="onButtonClick"
+                app:srcCompat="@drawable/btn_cancel" />
+
+            <ImageView
+                android:id="@+id/button_sub_accept"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_alignParentEnd="true"
+                android:onClick="onButtonClick"
+                app:srcCompat="@drawable/btn_accept" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/capture_frame" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.shitc.qrscanchecker.QRCodeReaderView
+      android:id="@id/capture_preview_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentTop="true"
+      />
+    <LinearLayout 
+        android:orientation="horizontal" 
+        android:background="@color/capture_text_cover_bg" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content">
+        <LinearLayout 
+            android:gravity="center" 
+            android:orientation="horizontal" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_margin="10dp"
+            android:layout_gravity="center_vertical"
+            >
+            <ImageView 
+                android:layout_gravity="center_vertical" 
+                android:id="@id/capture_flashlight" 
+                android:clickable="true" 
+                android:layout_width="30.0dip" 
+                android:layout_height="30.0dip" 
+                android:src="@drawable/scan_flashlight" 
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+        <TextView 
+            android:id="@id/capture_top_hint" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:textSize="15.0sp" 
+            
+            android:gravity="center" 
+            android:layout_gravity="center|top" 
+            
+            
+            android:textColor="#ffffff"
+			        android:shadowColor="#000000"
+			        android:shadowRadius="3"
+			        android:shadowDy="2"
+            android:text="" />
+    </LinearLayout>
+</FrameLayout>

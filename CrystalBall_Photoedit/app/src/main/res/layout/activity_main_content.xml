@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainView"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_logo_back"
+    android:overScrollMode="never"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <include layout="@layout/main_logo"></include>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:orientation="vertical">
+
+            <include layout="@layout/main_scroll_view"></include>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="10dip"
+            android:paddingTop="5dip">
+
+            <RelativeLayout
+                android:id="@+id/button_camera"
+                style="@style/Home_FunctionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onButtonClick">
+
+                <ImageView
+                    android:id="@+id/camera"
+
+                    android:layout_width="85dip"
+                    android:layout_height="85dip"
+                    android:background="@drawable/oval_btn_back_6"
+                    android:contentDescription="@null"
+                    android:padding="25.0dip"
+                    android:src="@drawable/main_icon_camera" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

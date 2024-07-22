@@ -1,0 +1,74 @@
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f0f0f0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <LinearLayout
+        android:id="@+id/top_bar"
+	    android:layout_width="match_parent"
+	    android:layout_height="80px"
+	    android:orientation="horizontal"
+	    android:background="@color/black">
+	    
+        
+	    
+	    <ImageButton
+	        android:id="@+id/btn_back"
+	        android:layout_width="60px"
+	        android:layout_height="60px"
+	        android:layout_gravity="center"
+	        android:scaleType="fitXY"
+            android:src="@drawable/xml_button_trans_rect_bg_selector"
+	        android:background="@drawable/share_backarrow_png"/>
+	    
+	   
+	    <TextView
+	        android:id="@+id/title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="20px"
+	        android:layout_gravity="center"
+	        android:text="QR코드생성"
+	        android:textSize="45px"
+	        android:textColor="@color/white"/>
+	    
+	</LinearLayout>
+	
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+	    
+        <ImageView
+	        android:id="@+id/image"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"/>
+	    
+        <TextView
+	        android:id="@+id/hint"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="30px"
+	        android:layout_marginLeft="20px"
+	        android:layout_marginRight="20px"
+	        
+	        android:layout_centerHorizontal="true"
+	        
+	        android:gravity="center_horizontal"
+	        
+	        android:text="인증화일을 넘겨받으려는 기재에서 첫 화면의 왼쪽끌기화면의 아래 부분에 있는 《QR인증받기》단추를 눌러 아래에 현시된 QR코드를 인식하여 인증화일을 자동구입합니다."
+	        android:textSize="30px"
+	        android:textColor="@color/black"/>
+	
+         
+        
+    
+    
+    </RelativeLayout>
+	
+    
+    
+
+</LinearLayout>

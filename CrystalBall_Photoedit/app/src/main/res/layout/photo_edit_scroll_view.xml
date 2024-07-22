@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hsv_sub_toolbar_edit"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/bottom_sub_tool_bar_size"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/button_crop"
+            android:layout_width="50dip"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dip"
+            android:layout_marginStart="15dip"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClickSubMenuItem">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/tool_button_crop" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView3"
+                android:layout_centerHorizontal="true"
+                android:text="따내기"
+                android:textColor="@color/color_hsv_menu_text"
+                android:textSize="11dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_rotate"
+            android:layout_width="50dip"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dip"
+            android:layout_marginStart="15dip"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClickSubMenuItem">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/tool_button_rotate" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView4"
+                android:layout_centerHorizontal="true"
+                android:text="회전"
+                android:textColor="@color/color_hsv_menu_text"
+                android:textSize="11dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_enhance"
+            android:layout_width="50dip"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dip"
+            android:layout_marginStart="15dip"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClickSubMenuItem">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/tool_button_enhance" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView5"
+                android:layout_centerHorizontal="true"
+                android:text="색도조절"
+                android:textColor="@color/color_hsv_menu_text"
+                android:textSize="11dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_softfocus"
+            android:layout_width="50dip"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dip"
+            android:layout_marginStart="15dip"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClickSubMenuItem">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/tool_button_softfocus" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView6"
+                android:layout_centerHorizontal="true"
+                android:text="초점효과"
+                android:textColor="@color/color_hsv_menu_text"
+                android:textSize="11dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_clarity"
+            android:layout_width="50dip"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dip"
+            android:layout_marginStart="15dip"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClickSubMenuItem">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/tool_button_clarity" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView7"
+                android:layout_centerHorizontal="true"
+                android:text="강조"
+                android:textColor="@color/color_hsv_menu_text"
+                android:textSize="11dip" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/button_cartoon"
+            android:layout_width="50dip"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dip"
+            android:layout_marginStart="15dip"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClickSubMenuItem">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/tool_button_cartoon" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView8"
+                android:layout_centerHorizontal="true"
+                android:text="소묘"
+                android:textColor="@color/color_hsv_menu_text"
+                android:textSize="11dip" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</HorizontalScrollView>

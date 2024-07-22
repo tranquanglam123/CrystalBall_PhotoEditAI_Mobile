@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Photoshop.PhotoeditActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="100"
+            android:background="@color/main_back">
+
+            <com.samhung.crystalball.photoeditor.Widget.SuperImageView
+                android:id="@+id/imageview_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="matrix" />
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dip"
+                android:layout_marginTop="15dip"
+                android:onClick="onClickMainMenuItem"
+                app:srcCompat="@drawable/round_btn_back" />
+
+            <ImageView
+                android:id="@+id/iv_save"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dip"
+                android:layout_marginTop="15dip"
+                android:onClick="onClickMainMenuItem"
+                app:srcCompat="@drawable/round_btn_save1" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bottom_sub_tool_bar_size">
+
+                <include layout="@layout/photo_edit_scroll_view" />
+
+                <include layout="@layout/photo_beauty_scroll_view" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bottom_tool_bar_size"
+                android:background="@color/color30">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_photo_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/photo_button_back"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableLeft="@drawable/photo_toolbar_edit"
+                        android:gravity="center"
+                        android:onClick="onClickMainMenuItem"
+                        android:paddingLeft="20dip"
+                        android:text="화상편집"
+                        android:textColor="@android:color/white"
+                        android:textSize="14dip" />
+
+                    <RadioButton
+                        android:id="@+id/rb_photo_beauty"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/photo_button_back"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/photo_toolbar_beauty"
+                        android:gravity="center"
+                        android:onClick="onClickMainMenuItem"
+                        android:paddingLeft="20dip"
+                        android:text="얼굴가공"
+                        android:textColor="@android:color/white"
+                        android:textSize="14dip" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

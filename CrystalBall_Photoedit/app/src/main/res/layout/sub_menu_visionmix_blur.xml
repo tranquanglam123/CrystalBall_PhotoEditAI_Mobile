@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/rl_imv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView_erase"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            app:srcCompat="@drawable/erase_up" />
+
+        <ImageView
+            android:id="@+id/imageView_blur"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            app:srcCompat="@drawable/a0n" />
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/sb_stroke_width"
+        android:layout_width="200dip"
+        android:layout_height="30dip"
+        android:layout_toRightOf="@+id/rl_imv"
+        android:max="100"
+        android:progress="50" />
+</RelativeLayout>

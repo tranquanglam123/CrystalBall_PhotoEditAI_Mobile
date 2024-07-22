@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dip"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/rl_imv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dip"
+        android:layout_marginStart="20dip"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageView_erase"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            app:srcCompat="@drawable/erase_up" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="40dip"
+        android:layout_marginStart="40dip"
+        android:layout_toRightOf="@+id/rl_imv"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_brushSize"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/brush_size" />
+
+            <SeekBar
+                android:id="@+id/sb_brush_size"
+                android:layout_width="match_parent"
+                android:layout_height="30dip"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dip"
+                android:layout_toRightOf="@+id/iv_brushSize"
+                android:max="100"
+                android:progress="50" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_hardness"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/brush_hardness" />
+
+            <SeekBar
+                android:id="@+id/sb_hardness"
+                android:layout_width="match_parent"
+                android:layout_height="30dip"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dip"
+                android:layout_toRightOf="@+id/iv_hardness"
+                android:max="100"
+                android:progress="50" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

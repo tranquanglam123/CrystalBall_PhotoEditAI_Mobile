@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="75.0dip"
+        android:layout_height="75.0dip"
+        android:layout_centerInParent="true"
+        android:background="@drawable/myprogress_back"
+        android:paddingEnd="5dip"
+        android:paddingStart="5dip">
+
+        <TextView
+            android:id="@+id/txt_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10.0dip"
+            android:singleLine="true"
+            android:text="@string/processing"
+            android:textColor="@color/color29"
+            android:textSize="13.0dip" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/txt_msg"
+            android:layout_centerHorizontal="true"
+            android:gravity="center">
+
+            <!--<ProgressBar-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:indeterminate="true"-->
+            <!--android:indeterminateDrawable="@drawable/myprogress" />-->
+
+            <ImageView
+                android:id="@+id/iv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/myprogress" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

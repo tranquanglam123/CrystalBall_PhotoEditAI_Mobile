@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hsv_main"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="5.0dip">
+
+        <RelativeLayout
+            android:id="@+id/button_mat"
+            style="@style/Home_FunctionButtonStyle"
+            android:layout_weight="1"
+            android:onClick="onButtonClick">
+
+            <ImageView
+                android:id="@+id/mat"
+                style="@style/Home_FunctionButtionIconStyle"
+                android:background="@drawable/oval_btn_back_1"
+                android:contentDescription="@null"
+                android:src="@drawable/main_icon_visionmix" />
+
+            <TextView
+                style="@style/Home_FunctionButtionTextStyle"
+                android:layout_below="@id/mat"
+                android:layout_centerHorizontal="true"
+                android:text="@string/visionmix" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_phedit"
+            style="@style/Home_FunctionButtonStyle"
+            android:layout_toEndOf="@id/button_mat"
+            android:layout_weight="1"
+            android:onClick="onButtonClick">
+
+            <ImageView
+                android:id="@+id/phedit"
+                style="@style/Home_FunctionButtionIconStyle"
+                android:background="@drawable/oval_btn_back_2"
+                android:contentDescription="@null"
+                android:src="@drawable/main_icon_photoshop" />
+
+            <TextView
+                style="@style/Home_FunctionButtionTextStyle"
+                android:layout_below="@id/phedit"
+                android:layout_centerHorizontal="true"
+                android:text="@string/photoshop" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_frame"
+            style="@style/Home_FunctionButtonStyle"
+            android:layout_toEndOf="@id/button_phedit"
+            android:layout_weight="1"
+            android:onClick="onButtonClick">
+
+            <ImageView
+                android:id="@+id/frame"
+                style="@style/Home_FunctionButtionIconStyle"
+                android:background="@drawable/oval_btn_back_3"
+                android:contentDescription="@null"
+                android:src="@drawable/main_icon_frame" />
+
+            <TextView
+                style="@style/Home_FunctionButtionTextStyle"
+                android:layout_below="@id/frame"
+                android:layout_centerHorizontal="true"
+                android:text="@string/frameeffect" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_sticker"
+            style="@style/Home_FunctionButtonStyle"
+            android:layout_toEndOf="@id/button_frame"
+            android:layout_weight="1"
+            android:onClick="onButtonClick">
+
+            <ImageView
+                android:id="@+id/sticker"
+                style="@style/Home_FunctionButtionIconStyle"
+                android:background="@drawable/oval_btn_back_5"
+                android:contentDescription="@null"
+                android:src="@drawable/main_icon_sticker" />
+
+            <TextView
+                style="@style/Home_FunctionButtionTextStyle"
+                android:layout_below="@+id/sticker"
+                android:layout_centerHorizontal="true"
+                android:text="@string/sticker" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_help"
+            style="@style/Home_FunctionButtonStyle"
+            android:layout_toEndOf="@+id/button_sticker"
+            android:layout_weight="1"
+            android:onClick="onButtonClick"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/help"
+                style="@style/Home_FunctionButtionIconStyle"
+                android:background="@drawable/oval_btn_back_4"
+                android:contentDescription="@null"
+                android:src="@drawable/main_icon_help" />
+
+            <TextView
+                style="@style/Home_FunctionButtionTextStyle"
+                android:layout_below="@id/help"
+                android:layout_centerHorizontal="true"
+                android:text="@string/help" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

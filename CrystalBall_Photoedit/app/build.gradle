@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'songyon'
+            keyPassword 'alvindigflkm'
+            storeFile file('E:/0_DevTools/Mobile/songyon.keystore')
+            storePassword 'alvindigflkm'
+        }
+    }
+    compileSdkVersion 25
+    defaultConfig {
+        applicationId "com.samhung.crystalball.photoeditor"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        renderscriptSupportModeEnabled true
+        ndk {
+            abiFilters "armeabi-v7a" //,"arm64-v8a","armeabi"
+            stl "gnustl_static"
+        }
+
+        externalNativeBuild {
+            cmake {
+                arguments "-DANDROID_TOOLCHAIN=clang"
+                arguments "-DCMAKE_BUILD_TYPE=Release"
+                cFlags "-fopenmp -O2 -fvisibility=hidden -fomit-frame-pointer -fstrict-aliasing -ffunction-sections -fdata-sections -ffast-math "
+                cppFlags "-fopenmp -O2 -fvisibility=hidden -fvisibility-inlines-hidden -fomit-frame-pointer -fstrict-aliasing -ffunction-sections -fdata-sections -ffast-math "
+                cppFlags ""
+                cppFlags "-std=c++11"
+                cppFlags "-frtti"
+                cppFlags "-fexceptions"
+            }
+        }
+    }
+    externalNativeBuild {
+//        ndkBuild {
+//            //    path 'src/main/jni/Android.mk'
+////            path "src/main/cpp/caffe-windows/CMakeLists.txt"
+//            path "CMakeLists.txt"
+//        }
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs = ['libs']
+//        }
+//    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':photostickersdk')
+    implementation project(':crystalball-widgets')
+    implementation 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:design:25.3.1'
+}
